@@ -1,0 +1,245 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Fiction",
+        "published_year": 1960,
+        "description": "A novel about the serious issues of rape and racial inequality."
+      },
+      {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "genre": "Dystopian",
+        "published_year": 1949,
+        "description": "A story set in a totalitarian society ruled by Big Brother."
+      },
+      {
+        "id": 3,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "genre": "Romance",
+        "published_year": 1813,
+        "description": "A classic novel about the manners and matrimonial machinations of early 19th-century English society."
+      },
+      {
+        "id": 4,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "genre": "Fiction",
+        "published_year": 1951,
+        "description": "A story about a teenager's struggle with growing up and society."
+      },
+      {
+        "id": 5,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Fiction",
+        "published_year": 1925,
+        "description": "A novel about the decline of the American Dream in the 1920s."
+      },
+      {
+        "id": 6,
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "genre": "Adventure",
+        "published_year": 1851,
+        "description": "A whaling voyage that explores themes of fate, revenge, and the unknown."
+      },
+      {
+        "id": 7,
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "genre": "Historical Fiction",
+        "published_year": 1869,
+        "description": "A novel that intertwines the lives of individuals during the Napoleonic wars."
+      },
+      {
+        "id": 8,
+        "title": "The Odyssey",
+        "author": "Homer",
+        "genre": "Epic Poetry",
+        "published_year": -800,
+        "description": "The journey of Odysseus after the fall of Troy and his quest to return home."
+      },
+      {
+        "id": 9,
+        "title": "Jane Eyre",
+        "author": "Charlotte Brontë",
+        "genre": "Gothic Fiction",
+        "published_year": 1847,
+        "description": "A story of an orphaned girl’s struggle for independence and love."
+      },
+      {
+        "id": 10,
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "genre": "Dystopian",
+        "published_year": 1932,
+        "description": "A vision of a future society where technology and pleasure control humanity."
+      },
+      {
+        "id": 11,
+        "title": "The Brothers Karamazov",
+        "author": "Fyodor Dostoevsky",
+        "genre": "Philosophical Fiction",
+        "published_year": 1880,
+        "description": "A tale about family, faith, and free will."
+      },
+      {
+        "id": 12,
+        "title": "Wuthering Heights",
+        "author": "Emily Brontë",
+        "genre": "Gothic Fiction",
+        "published_year": 1847,
+        "description": "A tragic story of love, revenge, and fate on the Yorkshire moors."
+      },
+      {
+        "id": 13,
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "published_year": 1954,
+        "description": "An epic tale of the battle between good and evil in Middle-earth."
+      },
+      {
+        "id": 14,
+        "title": "The Divine Comedy",
+        "author": "Dante Alighieri",
+        "genre": "Epic Poetry",
+        "published_year": 1320,
+        "description": "A journey through Hell, Purgatory, and Paradise."
+      },
+      {
+        "id": 15,
+        "title": "The Grapes of Wrath",
+        "author": "John Steinbeck",
+        "genre": "Historical Fiction",
+        "published_year": 1939,
+        "description": "A family’s struggle to survive during the Great Depression."
+      },
+      {
+        "id": 16,
+        "title": "Anna Karenina",
+        "author": "Leo Tolstoy",
+        "genre": "Realist Fiction",
+        "published_year": 1877,
+        "description": "A tragic tale of love, betrayal, and society in Russia."
+      },
+      {
+        "id": 17,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "genre": "Psychological Fiction",
+        "published_year": 1866,
+        "description": "The moral dilemmas of a young man after he commits a murder."
+      },
+      {
+        "id": 18,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "published_year": 1937,
+        "description": "Bilbo Baggins' adventure to win a share of the treasure guarded by Smaug the dragon."
+      },
+      {
+        "id": 19,
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "genre": "Gothic Fiction",
+        "published_year": 1818,
+        "description": "A scientist's creation of life and the monster it becomes."
+      },
+      {
+        "id": 20,
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "genre": "Philosophical Fiction",
+        "published_year": 1890,
+        "description": "A man who never ages while his portrait shows the marks of sin and time."
+      },
+      {
+        "id": 21,
+        "title": "Dracula",
+        "author": "Bram Stoker",
+        "genre": "Horror",
+        "published_year": 1897,
+        "description": "A vampire’s attempt to move from Transylvania to England."
+      },
+      {
+        "id": 22,
+        "title": "Les Misérables",
+        "author": "Victor Hugo",
+        "genre": "Historical Fiction",
+        "published_year": 1862,
+        "description": "The struggles of ex-convict Jean Valjean and his quest for redemption."
+      },
+      {
+        "id": 23,
+        "title": "The Count of Monte Cristo",
+        "author": "Alexandre Dumas",
+        "genre": "Adventure",
+        "published_year": 1844,
+        "description": "A man’s quest for revenge against those who wronged him."
+      },
+      {
+        "id": 24,
+        "title": "Don Quixote",
+        "author": "Miguel de Cervantes",
+        "genre": "Adventure",
+        "published_year": 1605,
+        "description": "A man’s quest to revive chivalry by becoming a knight-errant."
+      },
+      {
+        "id": 25,
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "genre": "Dystopian",
+        "published_year": 1953,
+        "description": "A future where books are outlawed and 'firemen' burn them."
+      },
+      {
+        "id": 26,
+        "title": "The Iliad",
+        "author": "Homer",
+        "genre": "Epic Poetry",
+        "published_year": -750,
+        "description": "The story of the Trojan War and the Greek hero Achilles."
+      },
+      {
+        "id": 27,
+        "title": "The Adventures of Huckleberry Finn",
+        "author": "Mark Twain",
+        "genre": "Adventure",
+        "published_year": 1884,
+        "description": "A young boy’s journey down the Mississippi River with a runaway slave."
+      },
+      {
+        "id": 28,
+        "title": "One Hundred Years of Solitude",
+        "author": "Gabriel García Márquez",
+        "genre": "Magical Realism",
+        "published_year": 1967,
+        "description": "The rise and fall of the Buendía family over generations."
+      },
+      {
+        "id": 29,
+        "title": "The Stranger",
+        "author": "Albert Camus",
+        "genre": "Philosophical Fiction",
+        "published_year": 1942,
+        "description": "An absurdist novel about a man’s indifference to society and morality."
+      },
+      {
+        "id": 30,
+        "title": "A Tale of Two Cities",
+        "author": "Charles Dickens",
+        "genre": "Historical Fiction",
+        "published_year": 1859,
+        "description": "A story of love and sacrifice set during the"
+ }
+  
+  ]
+}  
