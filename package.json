@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@iconify/json": "^2.2.260"
+  },
+  "dependencies": {
+    "paginationjs": "^2.6.0"
   }
 }

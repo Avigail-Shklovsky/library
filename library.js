@@ -60,7 +60,7 @@ function createTable(){
 
     const action =document.createElement('td');
     action.textContent='Action';
-    action.colSpan = 2; 
+    action.colSpan = 3; 
     action.style.textAlign = 'center';
     titleRow.appendChild(action);
 
@@ -95,8 +95,14 @@ function createTable(){
         updateCell.addEventListener('click', () => updateBook(item));
         newBook.appendChild(updateCell);
 
-        // const deleteCell=document.createElement('td');
-        // deleteCell.textContent
+        const deleteCell=document.createElement('td');
+        const deleteIcon=document.createElement('span');
+        deleteIcon.innerHTML = `<span class="iconify" data-icon="tabler:trash"></span>`;
+        deleteIcon.style.position='center';
+        deleteCell.addEventListener('click', () => deleteBook(item));
+        deleteCell.appendChild(deleteIcon);
+        newBook.appendChild(deleteCell);
+
 
         console.log(newBook);
         tableBody.appendChild(newBook);
