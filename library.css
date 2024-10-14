@@ -3,6 +3,23 @@ body {
     margin: 20px;
 }
 
+#titleRow{
+    background-color: rgb(182, 174, 174);
+    font-weight: bold;
+}
+
+#priceContainer{
+    width: 8vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+#titleContainer{
+    width: 20vw;
+    display: flex;
+    justify-content: left;
+    gap: 6px;
+}
+
 h1 {
     text-align: center;
 }
@@ -10,12 +27,12 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
