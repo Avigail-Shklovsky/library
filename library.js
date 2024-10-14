@@ -1,7 +1,11 @@
 import books from './books.json' with { type: 'json' };
+
 console.log(books);
 let originalBooksData = [...books.books]; 
 let booksData = [...originalBooksData];
+
+let currentPage = 1;
+const itemsPerPage = 3;
 
 let titleSortState = 'unsorted'; 
 let priceSortState = 'unsorted'; 
@@ -108,6 +112,9 @@ function createTable(){
         tableBody.appendChild(newBook);
     });
 
+    
+    
+
 }
 
 function sortTitle(icon) {
@@ -161,6 +168,9 @@ function sortPrice(icon) {
     createTable(); 
 }
 
-    window.onload=createTable;
+function openBook(book){
+    
+}
 
-;
+window.onload=createTable;
+
