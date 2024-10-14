@@ -12,6 +12,7 @@ body {
     width: 8vw;
     display: flex;
     justify-content: space-evenly;
+    gap: 6px;
 }
 #titleContainer{
     width: 20vw;
@@ -43,4 +44,47 @@ th {
 
 tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+#container{
+    display: flex;
+}
+#openBook {
+    display: none; 
+    margin-top: 10%;
+    width: 60%; 
+    height: 50vh;
+    margin-left: 35px; /* Add space between the table and the div */
+    vertical-align: top;
+    background-color:  rgb(182, 174, 174);
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for emphasis */
+    border-radius: 8px;
+    gap: 17px;
+}
+
+#openBook h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#openBook img {
+    width: 300px; /* Adjust image size as needed */
+    margin-bottom: 15px;
+}
+
+#openBook button {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 12px;
+    background-color: rgb(182, 174, 174);
+    color: white;
+    border: 2px solid rgb(108, 104, 104); 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#openBook button:hover {
+    background-color: rgb(108, 104, 104); /* Darker on hover */
 }
