@@ -8,7 +8,8 @@
         "genre": "Fiction",
         "published_year": 1960,
         "description": "A novel about the serious issues of rape and racial inequality.",
-        "price": 12.99
+        "price": 12.99,
+        "image":"./Assets/1.jpg"
       },
       {
         "id": 2,
@@ -17,7 +18,8 @@
         "genre": "Dystopian",
         "published_year": 1949,
         "description": "A story set in a totalitarian society ruled by Big Brother.",
-        "price": 10.99
+        "price": 10.99,
+        "image":"./Assets/2.jpg"
       },
       {
         "id": 3,
@@ -26,7 +28,8 @@
         "genre": "Romance",
         "published_year": 1813,
         "description": "A classic novel about the manners and matrimonial machinations of early 19th-century English society.",
-        "price": 8.99
+        "price": 8.99,
+        "image":"./Assets/3.jpg"
       },
       {
         "id": 4,
@@ -35,7 +38,8 @@
         "genre": "Fiction",
         "published_year": 1951,
         "description": "A story about a teenager's struggle with growing up and society.",
-        "price": 11.99
+        "price": 11.99,
+        "image":"./Assets/4.jpg"
       },
       {
         "id": 5,
@@ -44,7 +48,8 @@
         "genre": "Fiction",
         "published_year": 1925,
         "description": "A novel about the decline of the American Dream in the 1920s.",
-        "price": 9.99
+        "price": 9.99,
+        "image":"./Assets/5.jpg"
       },
       {
         "id": 6,
@@ -53,7 +58,8 @@
         "genre": "Adventure",
         "published_year": 1851,
         "description": "A whaling voyage that explores themes of fate, revenge, and the unknown.",
-        "price": 14.99
+        "price": 14.99,
+        "image":"./Assets/6.jpg"
       },
       {
         "id": 7,
@@ -62,7 +68,8 @@
         "genre": "Historical Fiction",
         "published_year": 1869,
         "description": "A novel that intertwines the lives of individuals during the Napoleonic wars.",
-        "price": 19.99
+        "price": 19.99,
+        "image":"./Assets/7.jpg"
       },
       {
         "id": 8,
@@ -71,7 +78,8 @@
         "genre": "Epic Poetry",
         "published_year": -800,
         "description": "The journey of Odysseus after the fall of Troy and his quest to return home.",
-        "price": 17.99
+        "price": 17.99,
+        "image":"./Assets/8.jpg"
       },
       {
         "id": 9,
@@ -80,7 +88,8 @@
         "genre": "Gothic Fiction",
         "published_year": 1847,
         "description": "A story of an orphaned girl’s struggle for independence and love.",
-        "price": 13.99
+        "price": 13.99,
+        "image":"./Assets/9.jpg"
       },
       {
         "id": 10,
@@ -89,7 +98,8 @@
         "genre": "Dystopian",
         "published_year": 1932,
         "description": "A vision of a future society where technology and pleasure control humanity.",
-        "price": 9.99
+        "price": 9.99,
+        "image":"./Assets/10.jpg"
       },
       {
         "id": 11,
@@ -98,7 +108,8 @@
         "genre": "Philosophical Fiction",
         "published_year": 1880,
         "description": "A tale about family, faith, and free will.",
-        "price": 15.99
+        "price": 15.99,
+        "image":"./Assets/11.jpg"
       },
       {
         "id": 12,
@@ -107,7 +118,8 @@
         "genre": "Gothic Fiction",
         "published_year": 1847,
         "description": "A tragic story of love, revenge, and fate on the Yorkshire moors.",
-        "price": 11.49
+        "price": 11.49,
+        "image":"./Assets/12.jpg"
       },
       {
         "id": 13,
@@ -116,7 +128,8 @@
         "genre": "Fantasy",
         "published_year": 1954,
         "description": "An epic tale of the battle between good and evil in Middle-earth.",
-        "price": 22.99
+        "price": 22.99,
+        "image":"./Assets/13.jpg"
       },
       {
         "id": 14,
@@ -125,7 +138,8 @@
         "genre": "Epic Poetry",
         "published_year": 1320,
         "description": "A journey through Hell, Purgatory, and Paradise.",
-        "price": 18.99
+        "price": 18.99,
+        "image":"./Assets/14.jpg"
       },
       {
         "id": 15,
@@ -134,7 +148,8 @@
         "genre": "Historical Fiction",
         "published_year": 1939,
         "description": "A family’s struggle to survive during the Great Depression.",
-        "price": 12.49
+        "price": 12.49,
+        "image":"./Assets/15.jpg"
       },
       {
         "id": 16,
@@ -143,7 +158,8 @@
         "genre": "Realist Fiction",
         "published_year": 1877,
         "description": "A tragic tale of love, betrayal, and society in Russia.",
-        "price": 16.99
+        "price": 16.99,
+        "image":"./Assets/1.jpg"
       },
       {
         "id": 17,
@@ -152,7 +168,8 @@
         "genre": "Psychological Fiction",
         "published_year": 1866,
         "description": "The moral dilemmas of a young man after he commits a murder.",
-        "price": 14.99
+        "price": 14.99,
+        "image":"./Assets/2.jpg"
       },
       {
         "id": 18,
@@ -161,7 +178,8 @@
         "genre": "Fantasy",
         "published_year": 1937,
         "description": "Bilbo Baggins' adventure to win a share of the treasure guarded by Smaug the dragon.",
-        "price": 13.99
+        "price": 13.99,
+        "image":"./Assets/3.jpg"
       },
       {
         "id": 19,
@@ -170,7 +188,8 @@
         "genre": "Gothic Fiction",
         "published_year": 1818,
         "description": "A scientist's creation of life and the monster it becomes.",
-        "price": 10.99
+        "price": 10.99,
+        "image":"./Assets/4.jpg"
       },
       {
         "id": 20,
@@ -179,7 +198,8 @@
         "genre": "Philosophical Fiction",
         "published_year": 1890,
         "description": "A man who never ages while his portrait shows the marks of sin and time.",
-        "price": 12.99
+        "price": 12.99,
+        "image":"./Assets/5.jpg"
       },
       {
         "id": 21,
@@ -188,7 +208,8 @@
         "genre": "Horror",
         "published_year": 1897,
         "description": "A vampire’s attempt to move from Transylvania to England.",
-        "price": 11.99
+        "price": 11.99,
+        "image":"./Assets/6.jpg"
       },
       {
         "id": 22,
@@ -197,7 +218,8 @@
         "genre": "Historical Fiction",
         "published_year": 1862,
         "description": "The struggles of ex-convict Jean Valjean and his quest for redemption.",
-        "price": 16.49
+        "price": 16.49,
+        "image":"./Assets/7.jpg"
       },
       {
         "id": 23,
@@ -206,7 +228,8 @@
         "genre": "Adventure",
         "published_year": 1844,
         "description": "A man’s quest for revenge against those who wronged him.",
-        "price": 17.99
+        "price": 17.99,
+        "image":"./Assets/8.jpg"
       },
       {
         "id": 24,
@@ -215,7 +238,8 @@
         "genre": "Adventure",
         "published_year": 1605,
         "description": "A man’s quest to revive chivalry by becoming a knight-errant.",
-        "price": 14.49
+        "price": 14.49,
+        "image":"./Assets/9.jpg"
       },
       {
         "id": 25,
@@ -224,7 +248,8 @@
         "genre": "Dystopian",
         "published_year": 1953,
         "description": "A future where books are outlawed and 'firemen' burn them.",
-        "price": 9.99
+        "price": 9.99,
+        "image":"./Assets/10.jpg"
       },
       {
         "id": 26,
@@ -233,7 +258,8 @@
         "genre": "Epic Poetry",
         "published_year": -750,
         "description": "The story of the Trojan War and the Greek hero Achilles.",
-        "price": 18.99
+        "price": 18.99,
+        "image":"./Assets/11.jpg"
       },
       {
         "id": 27,
@@ -242,7 +268,8 @@
         "genre": "Adventure",
         "published_year": 1884,
         "description": "A young boy’s journey down the Mississippi River with a runaway slave.",
-        "price": 13.49
+        "price": 13.49,
+        "image":"./Assets/12.jpg"
       },
       {
         "id": 28,
@@ -251,7 +278,8 @@
         "genre": "Magical Realism",
         "published_year": 1967,
         "description": "The rise and fall of the Buendía family over generations.",
-        "price": 12.49
+        "price": 12.49,
+        "image":"./Assets/13.jpg"
       },
       {
         "id": 29,
@@ -260,7 +288,8 @@
         "genre": "Philosophical Fiction",
         "published_year": 1942,
         "description": "An absurdist novel about a man’s indifference to society and morality.",
-        "price": 10.99
+        "price": 10.99,
+        "image":"./Assets/14.jpg"
       },
       {
         "id": 30,
@@ -269,7 +298,8 @@
         "genre": "Historical Fiction",
         "published_year": 1859,
         "description": "A story of love and sacrifice set during the French Revolution.",
-        "price": 11.99
+        "price": 11.99,
+        "image":"./Assets/15.jpg"
       }
     ]
   }
