@@ -4,15 +4,30 @@ console.log(books);
 let originalBooksData = [...books.books];
 let booksData = [...originalBooksData];
 
-// let currentPage = 1;
-// const itemsPerPage = 3;
+localStorage.setItem('booksArray',originalBooksData);
+
+
+let currentPage = 0;
+const itemsPerPage = 5;
+const maxPages = Math.ceil(booksData.length / itemsPerPage);
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+const pageNumbers = document.getElementById('pageNumbers');
+
+const tableBody = document.querySelector('#bookTable');
 
 let titleSortState = 'unsorted';
 let priceSortState = 'unsorted';
 
-function createTable() {
+function getPaginatedBooks() {
+    const start = currentPage * itemsPerPage;
+    const end = start + itemsPerPage;
+    const books = booksData.slice(start, end);
+    return books;
+  }
 
-    const tableBody = document.querySelector('#bookTable');
+function createTable() {
+    let currentBooks=getPaginatedBooks();
     tableBody.innerHTML = '';
 
     const titleRow = document.createElement('tr');
@@ -71,7 +86,7 @@ function createTable() {
     tableBody.appendChild(titleRow)
 
 
-    booksData.forEach(item => {
+    currentBooks.forEach(item => {
         const newBook = document.createElement('tr');
 
         const idCell = document.createElement('td');
@@ -84,7 +99,7 @@ function createTable() {
 
         const priceCell = document.createElement('td');
         priceCell.textContent = `${item.price}$`;
-        priceCell.style.textAlign = 'center'
+        // priceCell.style.textAlign = 'center'
         newBook.appendChild(priceCell);
 
         const openCell = document.createElement('td');
@@ -113,9 +128,45 @@ function createTable() {
     });
 
 
-
+    renderPageNumbers();
 
 }
+
+function renderPageNumbers() {
+    pageNumbers.innerHTML = ''; 
+    for (let i = 0; i < maxPages; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i + 1;
+      btn.classList.add('page-btn');
+      if (i === currentPage) {
+        btn.classList.add('active'); 
+      }
+      btn.addEventListener('click', () => goToPage(i));
+      pageNumbers.appendChild(btn);
+    }
+  }
+
+  function goToPage(pageIndex) {
+    currentPage = pageIndex;
+    console.log(currentPage);
+    
+    createTable();
+    renderPageNumbers(); 
+  }
+
+  prevButton.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      createTable();
+    }
+  });
+  
+  nextButton.addEventListener('click', () => {
+    if (currentPage < maxPages - 1) {
+      currentPage++;
+      createTable();
+    }
+  });
 
 function sortTitle(icon) {
     if (titleSortState === 'unsorted') {
@@ -143,7 +194,6 @@ function sortTitle(icon) {
     createTable();
 }
 
-
 function sortPrice(icon) {
     if (priceSortState === 'unsorted') {
         priceSortState = 'asc';
@@ -170,7 +220,8 @@ function sortPrice(icon) {
 
 function openBook(book) {
     let bookDiv = document.querySelector('#openBook');
-
+    let buttonDiv=document.querySelector('#addBook');
+    buttonDiv.style.top='26vw'
     // prevent duplicates
     bookDiv.innerHTML = '';
 
@@ -204,6 +255,8 @@ function openBook(book) {
     closeButton.textContent = 'Close';
     closeButton.addEventListener('click', () => {
         bookDiv.style.display = 'none';
+        buttonDiv.style.top='12vw'
+
     });
 
 
@@ -228,5 +281,6 @@ function updateBook() {
 function deleteBook() {
 
 }
+
 window.onload = createTable;
 

@@ -13,10 +13,18 @@
 </head>
 
 <body>
+    <header>Book Shop</header>
+    <button id="addBook">Add Book +</button>
     <div id="container">
-        <div id="bookTable"></div>
+        <div id="tableContainer">
+            <div id="bookTable"></div>
+            <div class="pagination-container">
+                <button id="prevButton">Previous</button>
+                <span id="pageNumbers" class="page-numbers"></span>
+                <button id="nextButton">Next</button>
+            </div>
+        </div>
         <div id="openBook" style="display: none;"></div>
-        <div id="pagination-container"></div>
     </div>
 
 
