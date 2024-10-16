@@ -32,7 +32,6 @@ function getBooksArrayFromLocalStorage() {
 function getPaginatedBooks() {
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
-    console.log(getBooksArrayFromLocalStorage().length); 
     let books = booksData.slice(start, end);
     
     return books;
@@ -40,7 +39,7 @@ function getPaginatedBooks() {
 
 function createTable() {
     const currentBooks = getPaginatedBooks();
-    console.log(currentBooks);
+    console.log("current books ",currentBooks);
     
     tableBody.innerHTML = ''; // Clear existing table rows
 
@@ -62,6 +61,7 @@ function createTable() {
     
     const iconSortTitle = document.createElement('span');
     iconSortTitle.id = 'sortTitleIcon';
+    iconSortTitle.className='icons';
     iconSortTitle.innerHTML = getSortIcon(titleSortState);
     titleContainer.addEventListener('click', () => sortTitle(iconSortTitle));
     
@@ -78,6 +78,7 @@ function createTable() {
 
     const iconSortPrice = document.createElement('span');
     iconSortPrice.id = 'sortPriceIcon';
+    iconSortTitle.className='icons';
     iconSortPrice.innerHTML = getSortIcon(priceSortState);
     priceContainer.addEventListener('click', () => sortPrice(iconSortPrice));
 
@@ -112,14 +113,14 @@ function createTable() {
 
         const openCell = document.createElement('td');
         openCell.textContent = 'Open';
-        console.log(item.ranking);
-        
+        openCell.className='actionButtons'
         openCell.addEventListener('click', () => openBook(item));
         newBook.appendChild(openCell);
 
         const updateCell = document.createElement('td');
         updateCell.textContent = 'Update';
-        updateCell.addEventListener('click', () => updateBook(item));
+        updateCell.className='actionButtons';
+        updateCell.addEventListener('click', () => updateBook(item) );
         newBook.appendChild(updateCell);
 
         const deleteCell = document.createElement('td');
@@ -144,11 +145,11 @@ function createTable() {
 // Get the appropriate sorting icon based on sort state
 function getSortIcon(sortState) {
     if (sortState === 'asc') {
-        return `<span class="iconify" data-icon="fa6-solid:sort-up" style="color: black;"></span>`;
+        return `<span class="iconify" data-icon="fa6-solid:sort-up" style="color: white;"></span>`;
     } else if (sortState === 'desc') {
-        return `<span class="iconify" data-icon="fa6-solid:sort-down" style="color: black;"></span>`;
+        return `<span class="iconify" data-icon="fa6-solid:sort-down" style="color: white;"></span>`;
     }
-    return `<span class="iconify" data-icon="fa6-solid:sort" style="color: black;"></span>`;
+    return `<span class="iconify" data-icon="fa6-solid:sort" style="color: white;"></span>`;
 }
 
 // Pagination: Render page numbers
