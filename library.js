@@ -33,9 +33,8 @@ function getBooksArrayFromLocalStorage(){
 function getPaginatedBooks() {
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
-    console.log(getBooksArrayFromLocalStorage().length);
-    
-    let books = getBooksArrayFromLocalStorage().slice(start, end);
+    console.log(getBooksArrayFromLocalStorage().length); 
+    let books = booksData.slice(start, end);
     
     return books;
 }
@@ -363,6 +362,11 @@ function deleteBook() {
 }
 
 window.onload = function() {
-    createTable();
-    newBook();
+    booksData = getBooksArrayFromLocalStorage();
+    if (booksData.length > 0) {
+        maxPages = Math.ceil(booksData.length / itemsPerPage);
+        createTable();
+        renderPageNumbers();
+        newBook()
+    }
 };
