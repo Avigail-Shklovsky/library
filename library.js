@@ -125,9 +125,10 @@ function createTable() {
             deleteCell.classList.add('clicked');
             setTimeout(() => {
                 deleteCell.classList.remove('clicked');
-                deleteBook(item); // Proceed with the delete action after feedback
-            }, 300); // Delay to remove the class after animation (in ms)
-        });        deleteCell.appendChild(deleteIcon);
+                deleteBook(item)
+            }, 300); 
+        });        
+        deleteCell.appendChild(deleteIcon);
         newBook.appendChild(deleteCell);
 
         tableBody.appendChild(newBook);
@@ -278,14 +279,23 @@ function newBook() {
 
 // Delete a book and update the list
 function deleteBook(bookToDelete) {
+    console.log("Book to delete:", bookToDelete); // Log the book to delete
     // Get the current books array from localStorage
     let booksArray = getBooksArrayFromLocalStorage();
+    console.log("Current Books Array:", booksArray); // Log the current array
 
     // Filter out the book to delete
     booksArray = booksArray.filter(book => book.id !== bookToDelete.id);
 
+    // Reassign IDs to ensure they are unique and sequential
+    booksArray = booksArray.map((book, index) => {
+        book.id = index + 1; // Reassign ID starting from 1
+        return book;
+    });
+
     // Update the localStorage with the new array (without the deleted book)
     localStorage.setItem('booksArray', JSON.stringify(booksArray));
+    console.log("Updated Books Array:", booksArray); // Log the updated array
 
     // Re-sync booksData and originalBooksData with the new array
     booksData = [...booksArray];
@@ -300,6 +310,88 @@ function deleteBook(bookToDelete) {
     renderPageNumbers();
 }
 
+
+
+function updateBook(bookToUpdate) {
+    const modal = document.getElementById("bookModal");
+    const openModalButton = document.getElementById("addBook");
+    const closeModalButton = document.getElementsByClassName("close")[0];
+    const bookForm = document.getElementById("bookForm");
+    const modalTitle = modal.querySelector("h2");
+    const submitButton = bookForm.querySelector("button[type='submit']");
+
+    // Set the modal title and button text for updating
+    modalTitle.textContent = "Update Book";
+    submitButton.textContent = "Update Book"; // Change button text
+
+    // Populate the form fields with the current book data
+    document.getElementById("title").value = bookToUpdate.title;
+    document.getElementById("author").value = bookToUpdate.author;
+    document.getElementById("genre").value = bookToUpdate.genre;
+    document.getElementById("published_year").value = bookToUpdate.published_year;
+    document.getElementById("description").value = bookToUpdate.description;
+    document.getElementById("price").value = bookToUpdate.price;
+    document.getElementById("image").value = bookToUpdate.image;
+
+    // Show the modal
+    modal.style.display = "block";
+    openModalButton.style.display = 'none'; // Hide the "Add Book" button while editing
+
+    closeModalButton.onclick = function () {
+        modal.style.display = "none";
+        openModalButton.style.display = 'block'; // Show the "Add Book" button again when closed
+    };
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            openModalButton.style.display = 'block'; // Show the "Add Book" button again when closed
+        }
+    };
+
+    // Override the form submission to handle the update
+    bookForm.onsubmit = function (event) {
+        event.preventDefault();
+
+        // Get the current books array from localStorage
+        let booksArray = getBooksArrayFromLocalStorage();
+
+        // Find the book in the array and update its details
+        const updatedBook = {
+            id: bookToUpdate.id, // Keep the same ID
+            title: document.getElementById("title").value,
+            author: document.getElementById("author").value,
+            genre: document.getElementById("genre").value,
+            published_year: parseInt(document.getElementById("published_year").value),
+            description: document.getElementById("description").value,
+            price: parseFloat(document.getElementById("price").value),
+            image: document.getElementById("image").value
+        };
+
+        // Replace the old book with the updated book in the array
+        booksArray = booksArray.map(book => book.id === bookToUpdate.id ? updatedBook : book);
+
+        // Update the localStorage with the updated array
+        localStorage.setItem('booksArray', JSON.stringify(booksArray));
+
+        // Re-sync booksData and originalBooksData with the updated array
+        booksData = [...booksArray];
+        originalBooksData = [...booksArray];
+
+        // Recalculate the number of pages
+        maxPages = Math.ceil(booksData.length / itemsPerPage);
+
+        // Reset to the first page and re-render the table
+        currentPage = 0;
+        createTable();
+        renderPageNumbers();
+
+        // Close the modal and reset the form
+        modal.style.display = "none";
+        bookForm.reset();
+        openModalButton.style.display = 'block'; // Show the "Add Book" button again
+    };
+}
 
 // Initialize page navigation buttons and the first table creation
 prevButton.addEventListener('click', () => {
