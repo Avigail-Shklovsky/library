@@ -4,12 +4,14 @@ console.log(books);
 let originalBooksData = [...books.books];
 let booksData = [...originalBooksData];
 
-localStorage.setItem('booksArray',originalBooksData);
+if (!localStorage.getItem('booksArray')) {
+    localStorage.setItem('booksArray', JSON.stringify(originalBooksData));
+}
 
 
 let currentPage = 0;
 const itemsPerPage = 5;
-const maxPages = Math.ceil(booksData.length / itemsPerPage);
+let maxPages = Math.ceil(getBooksArrayFromLocalStorage().length / itemsPerPage);
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
 const pageNumbers = document.getElementById('pageNumbers');
@@ -19,15 +21,29 @@ const tableBody = document.querySelector('#bookTable');
 let titleSortState = 'unsorted';
 let priceSortState = 'unsorted';
 
+function getBooksArrayFromLocalStorage(){
+    const bookArray=localStorage.getItem('booksArray');
+    let toReturn=[];
+    if(bookArray){
+        toReturn=JSON.parse(bookArray);}
+    return toReturn;
+}
+
+
 function getPaginatedBooks() {
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
-    const books = booksData.slice(start, end);
+    console.log(getBooksArrayFromLocalStorage().length);
+    
+    let books = getBooksArrayFromLocalStorage().slice(start, end);
+    
     return books;
-  }
+}
 
 function createTable() {
     let currentBooks=getPaginatedBooks();
+    console.log(currentBooks);
+    
     tableBody.innerHTML = '';
 
     const titleRow = document.createElement('tr');
@@ -187,7 +203,7 @@ function sortTitle(icon) {
             booksData.sort((a, b) => b.title.localeCompare(a.title));
             break;
         case 'unsorted':
-            booksData = [...originalBooksData];
+            booksData = getBooksArrayFromLocalStorage();
             break;
     }
 
@@ -211,7 +227,7 @@ function sortPrice(icon) {
             booksData.sort((a, b) => b.price - a.price);
             break;
         case 'unsorted':
-            booksData = [...originalBooksData];
+            booksData = getBooksArrayFromLocalStorage();
             break;
     }
 
@@ -274,6 +290,70 @@ function openBook(book) {
     bookDiv.style.display = 'flex';
 }
 
+function newBook(){
+    const modal = document.getElementById("bookModal");
+    const openModalButton = document.getElementById("addBook");
+    const closeModalButton = document.getElementsByClassName("close")[0];
+    const bookForm = document.getElementById("bookForm");
+
+    const bookArray=getBooksArrayFromLocalStorage();
+
+
+    openModalButton.onclick = function() {
+        modal.style.display = "block";
+        openModalButton.style.display='none'
+    }
+
+    closeModalButton.onclick = function() {
+        modal.style.display = "none";
+        openModalButton.style.display='block'
+
+    }
+
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    bookForm.onsubmit = function(event) {
+        event.preventDefault();
+    
+        // Get the current books array from localStorage
+        let bookArray = getBooksArrayFromLocalStorage();
+    
+        const newBook = {
+            id: bookArray.length + 1,
+            title: document.getElementById("title").value,
+            author: document.getElementById("author").value,
+            genre: document.getElementById("genre").value,
+            published_year: parseInt(document.getElementById("published_year").value),
+            description: document.getElementById("description").value,
+            price: parseFloat(document.getElementById("price").value),
+            image: document.getElementById("image").value
+        };
+    
+        // Add new book to the array and update localStorage
+        bookArray.push(newBook);
+        localStorage.setItem('booksArray', JSON.stringify(bookArray));
+    
+        booksData = [...bookArray];
+        originalBooksData = [...bookArray];
+        maxPages = Math.ceil(booksData.length / itemsPerPage);
+    
+        currentPage = 0;
+
+        createTable();
+        modal.style.display = "none";
+        bookForm.reset();
+    
+        // createTable();
+    };
+    
+
+}
+
 function updateBook() {
 
 }
@@ -282,5 +362,7 @@ function deleteBook() {
 
 }
 
-window.onload = createTable;
-
+window.onload = function() {
+    createTable();
+    newBook();
+};
