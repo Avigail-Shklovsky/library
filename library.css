@@ -194,3 +194,8 @@ tr:nth-child(even) {
     text-decoration: none;
     cursor: pointer;
 }
+.clicked {
+    background-color: red; /* Color change for visual feedback */
+    transform: scale(0.95); /* Slightly shrink the button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
