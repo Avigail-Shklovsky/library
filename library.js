@@ -171,6 +171,21 @@ function goToPage(pageIndex) {
     renderPageNumbers();
 }
 
+// Initialize page navigation buttons and the first table creation
+prevButton.addEventListener('click', () => {
+    if (currentPage > 0) {
+        currentPage--;
+        createTable();
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentPage < maxPages - 1) {
+        currentPage++;
+        createTable();
+    }
+});
+
 // Sorting: Sort by title
 function sortTitle(icon) {
     titleSortState = getNextSortState(titleSortState);
@@ -261,7 +276,6 @@ function openBook(book) {
     bookDiv.appendChild(textDiv);
     bookDiv.style.display = 'flex';
 }
-
 
 // updates the book after ranking
 function updateBookInLocalStorage(updatedBook) {
@@ -444,21 +458,6 @@ function updateBook(bookToUpdate) {
         openModalButton.style.display = 'block'; // Show the "Add Book" button again
     };
 }
-
-// Initialize page navigation buttons and the first table creation
-prevButton.addEventListener('click', () => {
-    if (currentPage > 0) {
-        currentPage--;
-        createTable();
-    }
-});
-
-nextButton.addEventListener('click', () => {
-    if (currentPage < maxPages - 1) {
-        currentPage++;
-        createTable();
-    }
-});
 
 // base case to website
 window.onload = function() {
