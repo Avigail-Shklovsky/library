@@ -9,7 +9,8 @@
         "published_year": 1960,
         "description": "A novel about the serious issues of rape and racial inequality.",
         "price": 12.99,
-        "image":"./Assets/1.jpg"
+        "image":"./Assets/1.jpg",
+        "ranking": 0
       },
       {
         "id": 2,
@@ -19,7 +20,8 @@
         "published_year": 1949,
         "description": "A story set in a totalitarian society ruled by Big Brother.",
         "price": 10.99,
-        "image":"./Assets/2.jpg"
+        "image":"./Assets/2.jpg",
+        "ranking": 0
       },
       {
         "id": 3,
@@ -29,7 +31,8 @@
         "published_year": 1813,
         "description": "A classic novel about the manners and matrimonial machinations of early 19th-century English society.",
         "price": 8.99,
-        "image":"./Assets/3.jpg"
+        "image":"./Assets/3.jpg",
+        "ranking": 0
       },
       {
         "id": 4,
@@ -39,7 +42,8 @@
         "published_year": 1951,
         "description": "A story about a teenager's struggle with growing up and society.",
         "price": 11.99,
-        "image":"./Assets/4.jpg"
+        "image":"./Assets/4.jpg",
+        "ranking": 0
       },
       {
         "id": 5,
@@ -49,7 +53,8 @@
         "published_year": 1925,
         "description": "A novel about the decline of the American Dream in the 1920s.",
         "price": 9.99,
-        "image":"./Assets/5.jpg"
+        "image":"./Assets/5.jpg",
+        "ranking": 0
       },
       {
         "id": 6,
@@ -59,7 +64,8 @@
         "published_year": 1851,
         "description": "A whaling voyage that explores themes of fate, revenge, and the unknown.",
         "price": 14.99,
-        "image":"./Assets/6.jpg"
+        "image":"./Assets/6.jpg",
+        "ranking": 0
       },
       {
         "id": 7,
@@ -69,7 +75,8 @@
         "published_year": 1869,
         "description": "A novel that intertwines the lives of individuals during the Napoleonic wars.",
         "price": 19.99,
-        "image":"./Assets/7.jpg"
+        "image":"./Assets/7.jpg",
+        "ranking": 0
       },
       {
         "id": 8,
@@ -79,7 +86,8 @@
         "published_year": -800,
         "description": "The journey of Odysseus after the fall of Troy and his quest to return home.",
         "price": 17.99,
-        "image":"./Assets/8.jpg"
+        "image":"./Assets/8.jpg",
+        "ranking": 0
       },
       {
         "id": 9,
@@ -89,7 +97,8 @@
         "published_year": 1847,
         "description": "A story of an orphaned girl’s struggle for independence and love.",
         "price": 13.99,
-        "image":"./Assets/9.jpg"
+        "image":"./Assets/9.jpg",
+        "ranking": 0
       },
       {
         "id": 10,
@@ -99,7 +108,8 @@
         "published_year": 1932,
         "description": "A vision of a future society where technology and pleasure control humanity.",
         "price": 9.99,
-        "image":"./Assets/10.jpg"
+        "image":"./Assets/10.jpg",
+        "ranking": 0
       },
       {
         "id": 11,
@@ -109,7 +119,8 @@
         "published_year": 1880,
         "description": "A tale about family, faith, and free will.",
         "price": 15.99,
-        "image":"./Assets/11.jpg"
+        "image":"./Assets/11.jpg",
+        "ranking": 0
       },
       {
         "id": 12,
@@ -119,7 +130,8 @@
         "published_year": 1847,
         "description": "A tragic story of love, revenge, and fate on the Yorkshire moors.",
         "price": 11.49,
-        "image":"./Assets/12.jpg"
+        "image":"./Assets/12.jpg",
+        "ranking": 0
       },
       {
         "id": 13,
@@ -129,7 +141,8 @@
         "published_year": 1954,
         "description": "An epic tale of the battle between good and evil in Middle-earth.",
         "price": 22.99,
-        "image":"./Assets/13.jpg"
+        "image":"./Assets/13.jpg",
+        "ranking": 0
       },
       {
         "id": 14,
@@ -139,7 +152,8 @@
         "published_year": 1320,
         "description": "A journey through Hell, Purgatory, and Paradise.",
         "price": 18.99,
-        "image":"./Assets/14.jpg"
+        "image":"./Assets/14.jpg",
+        "ranking": 0
       },
       {
         "id": 15,
@@ -149,7 +163,8 @@
         "published_year": 1939,
         "description": "A family’s struggle to survive during the Great Depression.",
         "price": 12.49,
-        "image":"./Assets/15.jpg"
+        "image":"./Assets/15.jpg",
+        "ranking": 0
       },
       {
         "id": 16,
@@ -159,7 +174,8 @@
         "published_year": 1877,
         "description": "A tragic tale of love, betrayal, and society in Russia.",
         "price": 16.99,
-        "image":"./Assets/1.jpg"
+        "image":"./Assets/1.jpg",
+        "ranking": 0
       },
       {
         "id": 17,
@@ -169,7 +185,8 @@
         "published_year": 1866,
         "description": "The moral dilemmas of a young man after he commits a murder.",
         "price": 14.99,
-        "image":"./Assets/2.jpg"
+        "image":"./Assets/2.jpg",
+        "ranking": 0
       },
       {
         "id": 18,
@@ -179,7 +196,8 @@
         "published_year": 1937,
         "description": "Bilbo Baggins' adventure to win a share of the treasure guarded by Smaug the dragon.",
         "price": 13.99,
-        "image":"./Assets/3.jpg"
+        "image":"./Assets/3.jpg",
+        "ranking": 0
       },
       {
         "id": 19,
@@ -189,7 +207,8 @@
         "published_year": 1818,
         "description": "A scientist's creation of life and the monster it becomes.",
         "price": 10.99,
-        "image":"./Assets/4.jpg"
+        "image":"./Assets/4.jpg",
+        "ranking": 0
       },
       {
         "id": 20,
@@ -199,7 +218,8 @@
         "published_year": 1890,
         "description": "A man who never ages while his portrait shows the marks of sin and time.",
         "price": 12.99,
-        "image":"./Assets/5.jpg"
+        "image":"./Assets/5.jpg",
+        "ranking": 0
       },
       {
         "id": 21,
@@ -209,7 +229,8 @@
         "published_year": 1897,
         "description": "A vampire’s attempt to move from Transylvania to England.",
         "price": 11.99,
-        "image":"./Assets/6.jpg"
+        "image":"./Assets/6.jpg",
+        "ranking": 0
       },
       {
         "id": 22,
@@ -219,7 +240,8 @@
         "published_year": 1862,
         "description": "The struggles of ex-convict Jean Valjean and his quest for redemption.",
         "price": 16.49,
-        "image":"./Assets/7.jpg"
+        "image":"./Assets/7.jpg",
+        "ranking": 0
       },
       {
         "id": 23,
@@ -229,7 +251,8 @@
         "published_year": 1844,
         "description": "A man’s quest for revenge against those who wronged him.",
         "price": 17.99,
-        "image":"./Assets/8.jpg"
+        "image":"./Assets/8.jpg",
+        "ranking": 0
       },
       {
         "id": 24,
@@ -239,7 +262,8 @@
         "published_year": 1605,
         "description": "A man’s quest to revive chivalry by becoming a knight-errant.",
         "price": 14.49,
-        "image":"./Assets/9.jpg"
+        "image":"./Assets/9.jpg",
+        "ranking": 0
       },
       {
         "id": 25,
@@ -249,7 +273,8 @@
         "published_year": 1953,
         "description": "A future where books are outlawed and 'firemen' burn them.",
         "price": 9.99,
-        "image":"./Assets/10.jpg"
+        "image":"./Assets/10.jpg",
+        "ranking": 0
       },
       {
         "id": 26,
@@ -259,7 +284,8 @@
         "published_year": -750,
         "description": "The story of the Trojan War and the Greek hero Achilles.",
         "price": 18.99,
-        "image":"./Assets/11.jpg"
+        "image":"./Assets/11.jpg",
+        "ranking": 0
       },
       {
         "id": 27,
@@ -269,7 +295,8 @@
         "published_year": 1884,
         "description": "A young boy’s journey down the Mississippi River with a runaway slave.",
         "price": 13.49,
-        "image":"./Assets/12.jpg"
+        "image":"./Assets/12.jpg",
+        "ranking": 0
       },
       {
         "id": 28,
@@ -279,7 +306,8 @@
         "published_year": 1967,
         "description": "The rise and fall of the Buendía family over generations.",
         "price": 12.49,
-        "image":"./Assets/13.jpg"
+        "image":"./Assets/13.jpg",
+        "ranking": 0
       },
       {
         "id": 29,
@@ -289,7 +317,8 @@
         "published_year": 1942,
         "description": "An absurdist novel about a man’s indifference to society and morality.",
         "price": 10.99,
-        "image":"./Assets/14.jpg"
+        "image":"./Assets/14.jpg",
+        "ranking": 0
       },
       {
         "id": 30,
@@ -299,7 +328,8 @@
         "published_year": 1859,
         "description": "A story of love and sacrifice set during the French Revolution.",
         "price": 11.99,
-        "image":"./Assets/15.jpg"
+        "image":"./Assets/15.jpg",
+        "ranking": 0
       }
     ]
   }
