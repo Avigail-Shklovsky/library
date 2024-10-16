@@ -102,7 +102,7 @@ tr:nth-child(even) {
     /* margin-right: 3vw; */
     flex-direction: row;
     width: 43%;
-    height: 50vh;
+    height: 55vh;
     margin-left: 30px;
     background-color: rgb(182, 174, 174);
     padding: 15px;
@@ -134,6 +134,11 @@ tr:nth-child(even) {
     font-size: 14px;
 }
 
+
+#openBok .rank{
+    padding: 2px 2px;
+}
+
 #openBook button:hover {
     background-color: rgb(182, 174, 174);
 }
@@ -157,7 +162,7 @@ tr:nth-child(even) {
 #bookModal {
     position: fixed;
     width: 50%;
-    height: 60%;
+    height: 65%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -200,3 +205,10 @@ tr:nth-child(even) {
     transform: scale(0.95); /* Slightly shrink the button */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
 }
+#rank{
+    height: min-content;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+

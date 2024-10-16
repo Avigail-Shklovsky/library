@@ -24,7 +24,7 @@ const tableBody = document.querySelector('#bookTable');
 
 // Retrieve books array from local storage
 function getBooksArrayFromLocalStorage() {
-    const bookArray = localStorage.getItem('booksArray');
+    const bookArray = localStorage.getItem('booksArray');    
     return bookArray ? JSON.parse(bookArray) : [];
 }
 
@@ -40,6 +40,8 @@ function getPaginatedBooks() {
 
 function createTable() {
     const currentBooks = getPaginatedBooks();
+    console.log(currentBooks);
+    
     tableBody.innerHTML = ''; // Clear existing table rows
 
     // Table header with sorting icons
@@ -110,6 +112,8 @@ function createTable() {
 
         const openCell = document.createElement('td');
         openCell.textContent = 'Open';
+        console.log(item.ranking);
+        
         openCell.addEventListener('click', () => openBook(item));
         newBook.appendChild(openCell);
 
@@ -202,6 +206,9 @@ function openBook(book) {
     buttonDiv.style.top = '26vw';
     bookDiv.innerHTML = ''; // Clear previous content
 
+    console.log(book.ranking);
+    
+
     const textDiv = document.createElement('div');
     textDiv.innerHTML = `
         <h1>${book.title}</h1>
@@ -210,21 +217,63 @@ function openBook(book) {
         <h4>Published Year: ${book.published_year}</h4>
         <h4>Description: ${book.description}</h4>
         <h4>Price: ${book.price}$</h4>
-        <button>Close</button>
+        <div id="rank">
+        <button class="rank" id="rankDown">-</button>
+        <h4>Ranking: <span id="ranking">${book.ranking}</span></h4>
+        <button id="rankUp" class="rank">+</button>
+                 </div>
+        <button id="closeButton">Close</button>
     `;
+    
     const image = document.createElement('img');
     image.src = book.image;
     image.alt = book.title;
 
-    const closeButton = textDiv.querySelector('button');
+    const closeButton = textDiv.querySelector('#closeButton');
     closeButton.addEventListener('click', () => {
         bookDiv.style.display = 'none';
         buttonDiv.style.top = '12vw';
     });
 
-    bookDiv.appendChild(image)
+    const rankUpButton = textDiv.querySelector('#rankUp');
+    rankUpButton.addEventListener('click', () => {
+        if (book.ranking < 10) { // Ensure the ranking does not exceed 10
+            book.ranking++;
+            updateRankingDisplay(book.ranking);
+            updateBookInLocalStorage(book); // Update the local storage
+        }
+    });
+
+    const rankDownButton = textDiv.querySelector('#rankDown');
+    rankDownButton.addEventListener('click', () => {
+        if (book.ranking > 0) { // Ensure the ranking does not fall below 0
+            book.ranking--;
+            updateRankingDisplay(book.ranking);
+            updateBookInLocalStorage(book); // Update the local storage
+        }
+    });
+
+    function updateRankingDisplay(ranking) {
+        textDiv.querySelector('#ranking').textContent = ranking;
+    }
+
+    bookDiv.appendChild(image);
     bookDiv.appendChild(textDiv);
     bookDiv.style.display = 'flex';
+}
+
+
+// updates the book after ranking
+function updateBookInLocalStorage(updatedBook) {
+    let booksArray = getBooksArrayFromLocalStorage(); // Fetch current books array
+
+    // Find the index of the book to update
+    const bookIndex = booksArray.findIndex(book => book.id === updatedBook.id);
+    if (bookIndex !== -1) {
+        // Update the book at that index
+        booksArray[bookIndex] = updatedBook;
+        localStorage.setItem('booksArray', JSON.stringify(booksArray)); // Update local storage
+    }
 }
 
 // Initialize the modal for adding a new book
@@ -262,7 +311,8 @@ function newBook() {
             published_year: document.getElementById("published_year").value,
             description: document.getElementById("description").value,
             price: document.getElementById("price").value,
-            image: document.getElementById("image").value
+            image: document.getElementById("image").value,
+            ranking: 0
         };
 
         bookArray.push(newBook);
@@ -310,8 +360,7 @@ function deleteBook(bookToDelete) {
     renderPageNumbers();
 }
 
-
-
+// update book details
 function updateBook(bookToUpdate) {
     const modal = document.getElementById("bookModal");
     const openModalButton = document.getElementById("addBook");
@@ -332,6 +381,8 @@ function updateBook(bookToUpdate) {
     document.getElementById("description").value = bookToUpdate.description;
     document.getElementById("price").value = bookToUpdate.price;
     document.getElementById("image").value = bookToUpdate.image;
+    document.getElementById("rankingForm").value = bookToUpdate.ranking;
+
 
     // Show the modal
     modal.style.display = "block";
@@ -365,7 +416,8 @@ function updateBook(bookToUpdate) {
             published_year: parseInt(document.getElementById("published_year").value),
             description: document.getElementById("description").value,
             price: parseFloat(document.getElementById("price").value),
-            image: document.getElementById("image").value
+            image: document.getElementById("image").value,
+            ranking: document.getElementById("rankingForm").value
         };
 
         // Replace the old book with the updated book in the array
